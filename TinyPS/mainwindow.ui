@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>TinyPS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="imgLabel">
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>变形</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>旋转</string>
+     </property>
+     <addaction name="actionLRotate"/>
+     <addaction name="actionRRotate"/>
+     <addaction name="actionRotate"/>
+     <addaction name="actionFreeRotate"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>翻转</string>
+     </property>
+     <addaction name="actionHorFlip"/>
+     <addaction name="actionVerFlip"/>
+    </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>裁剪</string>
+     </property>
+     <addaction name="actionRecCut"/>
+     <addaction name="actionCircleCut"/>
+     <addaction name="actionPolyCut"/>
+    </widget>
+    <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
+    <addaction name="menu_5"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>滤镜</string>
+    </property>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>灰度非线性变换</string>
+     </property>
+     <addaction name="actionGrayLog"/>
+     <addaction name="actionGrayE"/>
+     <addaction name="actionGrayGamma"/>
+    </widget>
+    <addaction name="actionHSL"/>
+    <addaction name="actionColorHalftone"/>
+    <addaction name="separator"/>
+    <addaction name="actionGray"/>
+    <addaction name="menu_7"/>
+    <addaction name="actionHistogram"/>
+    <addaction name="separator"/>
+    <addaction name="actionMedianFilter"/>
+    <addaction name="actionGaussianFilter"/>
+    <addaction name="actionSharpen"/>
+    <addaction name="actionRadialBlur"/>
+    <addaction name="separator"/>
+    <addaction name="actionFrequencySmooth"/>
+    <addaction name="actionFrequencySharpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionSuperPixel"/>
+    <addaction name="actionFace"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_6"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actionLRotate">
+   <property name="text">
+    <string>向左旋转90度</string>
+   </property>
+  </action>
+  <action name="actionRRotate">
+   <property name="text">
+    <string>向右旋转90度</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="text">
+    <string>旋转180度</string>
+   </property>
+  </action>
+  <action name="actionHorFlip">
+   <property name="text">
+    <string>水平翻转</string>
+   </property>
+  </action>
+  <action name="actionVerFlip">
+   <property name="text">
+    <string>竖直翻转</string>
+   </property>
+  </action>
+  <action name="actionFreeRotate">
+   <property name="text">
+    <string>自由旋转</string>
+   </property>
+  </action>
+  <action name="actionRecCut">
+   <property name="text">
+    <string>矩形裁剪</string>
+   </property>
+  </action>
+  <action name="actionCircleCut">
+   <property name="text">
+    <string>圆形裁剪</string>
+   </property>
+  </action>
+  <action name="actionPolyCut">
+   <property name="text">
+    <string>多边形裁剪</string>
+   </property>
+  </action>
+  <action name="actionHSL">
+   <property name="text">
+    <string>亮度/色调/饱和度</string>
+   </property>
+  </action>
+  <action name="actionColorHalftone">
+   <property name="text">
+    <string>彩色半调</string>
+   </property>
+  </action>
+  <action name="actionGray">
+   <property name="text">
+    <string>灰度线性变换</string>
+   </property>
+  </action>
+  <action name="actionGrayLog">
+   <property name="text">
+    <string>对数变换</string>
+   </property>
+  </action>
+  <action name="actionGrayE">
+   <property name="text">
+    <string>指数变换</string>
+   </property>
+  </action>
+  <action name="actionGrayGamma">
+   <property name="text">
+    <string>Gamma变换</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>灰度直方图</string>
+   </property>
+  </action>
+  <action name="actionMedianFilter">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="actionGaussianFilter">
+   <property name="text">
+    <string>高斯滤波</string>
+   </property>
+  </action>
+  <action name="actionSharpen">
+   <property name="text">
+    <string>锐化</string>
+   </property>
+  </action>
+  <action name="actionRadialBlur">
+   <property name="text">
+    <string>径向模糊</string>
+   </property>
+  </action>
+  <action name="actionFrequencySmooth">
+   <property name="text">
+    <string>频域平滑</string>
+   </property>
+  </action>
+  <action name="actionFrequencySharpen">
+   <property name="text">
+    <string>频域锐化</string>
+   </property>
+  </action>
+  <action name="actionSuperPixel">
+   <property name="text">
+    <string>晶格化</string>
+   </property>
+  </action>
+  <action name="actionFace">
+   <property name="text">
+    <string>人像美肤</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
